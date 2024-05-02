@@ -78,7 +78,7 @@ export default class Test2Component {
       qc.push(startAfter(startAfterTodo.id));
     }
 
-    return collectionData(query(ref, ...qc)).pipe(take(1));
+    return collectionData(query(ref, ...qc));
   }
 
   loadMore(todos: any[] | null) {

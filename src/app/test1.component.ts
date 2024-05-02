@@ -1,7 +1,5 @@
 import { CommonModule } from '@angular/common';
 import {
-  ApplicationRef,
-  ChangeDetectorRef,
   Component,
   DestroyRef,
   afterNextRender,
@@ -85,7 +83,9 @@ export default class Test1Component {
       qc.push(startAfter(startAfterTodo.id));
     }
 
-    return collectionData(query(ref, ...qc)).pipe(take(1));
+    return collectionData(query(ref, ...qc)).pipe(
+      // take(1)
+      );
   }
 
   loadMore(todos: any[] | null) {

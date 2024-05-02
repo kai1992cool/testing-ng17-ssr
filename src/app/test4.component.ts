@@ -70,7 +70,7 @@ export default class Test4Component {
       qc.push(startAfter(startAfterTodo.id));
     }
 
-    return firstValueFrom(collectionData(query(ref, ...qc)));
+    return collectionData(query(ref, ...qc));
   }
 
   loadMore(todos: any[] | null) {
